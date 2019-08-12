@@ -1,14 +1,16 @@
 package shop.product;
 
+import org.springframework.stereotype.Service;
+
 import java.util.*;
 
+@Service
 public class ProductService {
     private Map<String, Product> products = new HashMap<>();
 
     public void save(Product product) {
         String key = product.getName().toLowerCase();
         this.products.put(key, product);
-
     }
 
     public Optional<Product> getByName(String name) {

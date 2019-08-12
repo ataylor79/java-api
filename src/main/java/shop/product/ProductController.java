@@ -10,7 +10,7 @@ import java.util.*;
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @PostMapping
     public Product setProduct (@RequestBody Product product) {
